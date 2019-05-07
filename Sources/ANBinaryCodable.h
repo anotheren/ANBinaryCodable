@@ -6,7 +6,7 @@
 //  Copyright © 2019 anotheren.com. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for ANBinaryCodable.
 FOUNDATION_EXPORT double ANBinaryCodableVersionNumber;
