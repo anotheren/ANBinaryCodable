@@ -24,9 +24,9 @@ public struct BinaryDataEncoder {
 struct _BinaryDataEncoder: BinaryEncoder {
     
     let bufferedData: BufferedData
-    let userInfo: [BinaryCodingUserInfoKey : Any]
+    let userInfo: [BinaryCodingUserInfoKey: Any]
     
-    init(bufferedData: BufferedData, userInfo: [BinaryCodingUserInfoKey : Any]) {
+    init(bufferedData: BufferedData, userInfo: [BinaryCodingUserInfoKey: Any]) {
         self.bufferedData = bufferedData
         self.userInfo = userInfo
     }
@@ -39,65 +39,65 @@ struct _BinaryDataEncoder: BinaryEncoder {
 struct _BinaryDataEncodingContainer: BinaryEncodingContainer {
     
     let bufferedData: BufferedData
-    let userInfo: [BinaryCodingUserInfoKey : Any]
+    let userInfo: [BinaryCodingUserInfoKey: Any]
     
-    init(bufferedData: BufferedData, userInfo: [BinaryCodingUserInfoKey : Any]) {
+    init(bufferedData: BufferedData, userInfo: [BinaryCodingUserInfoKey: Any]) {
         self.bufferedData = bufferedData
         self.userInfo = userInfo
     }
     
     func encode(_ value: Int8, using endian: Endian) throws {
-        let data = value.fixed(by: endian).data
+        let data = value.update(endian: endian).data
         bufferedData.write(data: data)
     }
     
     func encode(_ value: Int16, using endian: Endian) throws {
-        let data = value.fixed(by: endian).data
+        let data = value.update(endian: endian).data
         bufferedData.write(data: data)
     }
     
     func encode(_ value: Int32, using endian: Endian) throws {
-        let data = value.fixed(by: endian).data
+        let data = value.update(endian: endian).data
         bufferedData.write(data: data)
     }
     
     func encode(_ value: Int64, using endian: Endian) throws {
-        let data = value.fixed(by: endian).data
+        let data = value.update(endian: endian).data
         bufferedData.write(data: data)
     }
     
     func encode(_ value: UInt8, using endian: Endian) throws {
-        let data = value.fixed(by: endian).data
+        let data = value.update(endian: endian).data
         bufferedData.write(data: data)
     }
     
     func encode(_ value: UInt16, using endian: Endian) throws {
-        let data = value.fixed(by: endian).data
+        let data = value.update(endian: endian).data
         bufferedData.write(data: data)
     }
     
     func encode(_ value: UInt24, using endian: Endian) throws {
-        let data = value.fixed(by: endian).data
+        let data = value.update(endian: endian).data
         bufferedData.write(data: data)
     }
     
     func encode(_ value: UInt32, using endian: Endian) throws {
-        let data = value.fixed(by: endian).data
+        let data = value.update(endian: endian).data
         bufferedData.write(data: data)
     }
     
     func encode(_ value: UInt64, using endian: Endian) throws {
-        let data = value.fixed(by: endian).data
+        let data = value.update(endian: endian).data
         bufferedData.write(data: data)
     }
     
     func encode(_ value: Float, using endian: Endian) throws {
-        let data = value.bitPattern.fixed(by: endian).data
+        let data = value.bitPattern.update(endian: endian).data
         bufferedData.write(data: data)
     }
     
     func encode(_ value: Double, using endian: Endian) throws {
-        let data = value.bitPattern.fixed(by: endian).data
+        let data = value.bitPattern.update(endian: endian).data
         bufferedData.write(data: data)
     }
     

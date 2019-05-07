@@ -10,7 +10,7 @@ import Foundation
 
 extension FixedWidthInteger {
     
-    func fixed(by endian: Endian) -> Self {
+    func update(endian: Endian) -> Self {
         switch endian {
         case .big:
             return bigEndian

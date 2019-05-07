@@ -19,9 +19,9 @@ extension Endian: CustomStringConvertible {
     public var description: String {
         switch self {
         case .big:
-            return "Big-Endian"
+            return "big-endian"
         case .little:
-            return "Little-Endian"
+            return "little-endian"
         }
     }
 }
