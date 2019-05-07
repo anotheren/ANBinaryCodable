@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		A0205E162280779C006616A7 /* Endian.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0205E142280779C006616A7 /* Endian.swift */; };
 		A0205E1A22807BBA006616A7 /* BinaryDataDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0205E1922807BBA006616A7 /* BinaryDataDecoder.swift */; };
 		A0205E1C22807BCC006616A7 /* BinaryDataEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0205E1B22807BCC006616A7 /* BinaryDataEncoder.swift */; };
+		A0205E1E2281ADBD006616A7 /* UIn24Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0205E1D2281ADBD006616A7 /* UIn24Tests.swift */; };
 		A038C7ED2280745700CBD8E0 /* ANBinaryCodable.h in Headers */ = {isa = PBXBuildFile; fileRef = A038C7EB2280745700CBD8E0 /* ANBinaryCodable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A049968422816617009D09FA /* BufferedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A049968322816617009D09FA /* BufferedData.swift */; };
 		A049968622817DE5009D09FA /* Ex+FixedWidthInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A049968522817DE5009D09FA /* Ex+FixedWidthInteger.swift */; };
@@ -43,6 +44,7 @@
 		A0205E18228077C9006616A7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A0205E1922807BBA006616A7 /* BinaryDataDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryDataDecoder.swift; sourceTree = "<group>"; };
 		A0205E1B22807BCC006616A7 /* BinaryDataEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryDataEncoder.swift; sourceTree = "<group>"; };
+		A0205E1D2281ADBD006616A7 /* UIn24Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIn24Tests.swift; sourceTree = "<group>"; };
 		A038C7E82280745700CBD8E0 /* ANBinaryCodable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ANBinaryCodable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A038C7EB2280745700CBD8E0 /* ANBinaryCodable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ANBinaryCodable.h; sourceTree = "<group>"; };
 		A038C7EC2280745700CBD8E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 		A049968C22818384009D09FA /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				A0205E1D2281ADBD006616A7 /* UIn24Tests.swift */,
 				A049968D22818384009D09FA /* BinaryCodableTests.swift */,
 				A049968F22818384009D09FA /* Info.plist */,
 			);
@@ -222,7 +225,7 @@
 				};
 			};
 			buildConfigurationList = A038C7E22280745700CBD8E0 /* Build configuration list for PBXProject "ANBinaryCodable" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -278,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0205E1E2281ADBD006616A7 /* UIn24Tests.swift in Sources */,
 				A049968E22818384009D09FA /* BinaryCodableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
