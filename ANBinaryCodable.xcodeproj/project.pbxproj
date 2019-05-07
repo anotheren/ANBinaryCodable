@@ -16,7 +16,21 @@
 		A0205E1A22807BBA006616A7 /* BinaryDataDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0205E1922807BBA006616A7 /* BinaryDataDecoder.swift */; };
 		A0205E1C22807BCC006616A7 /* BinaryDataEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0205E1B22807BCC006616A7 /* BinaryDataEncoder.swift */; };
 		A038C7ED2280745700CBD8E0 /* ANBinaryCodable.h in Headers */ = {isa = PBXBuildFile; fileRef = A038C7EB2280745700CBD8E0 /* ANBinaryCodable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A049968422816617009D09FA /* BufferedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A049968322816617009D09FA /* BufferedData.swift */; };
+		A049968622817DE5009D09FA /* Ex+FixedWidthInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A049968522817DE5009D09FA /* Ex+FixedWidthInteger.swift */; };
+		A049968E22818384009D09FA /* BinaryCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A049968D22818384009D09FA /* BinaryCodableTests.swift */; };
+		A049969022818384009D09FA /* ANBinaryCodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A038C7E82280745700CBD8E0 /* ANBinaryCodable.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A049969122818384009D09FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A038C7DF2280745700CBD8E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A038C7E72280745700CBD8E0;
+			remoteInfo = ANBinaryCodable;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A0205E03228074F3006616A7 /* BinaryDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryDecodable.swift; sourceTree = "<group>"; };
@@ -32,6 +46,11 @@
 		A038C7E82280745700CBD8E0 /* ANBinaryCodable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ANBinaryCodable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A038C7EB2280745700CBD8E0 /* ANBinaryCodable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ANBinaryCodable.h; sourceTree = "<group>"; };
 		A038C7EC2280745700CBD8E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A049968322816617009D09FA /* BufferedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BufferedData.swift; sourceTree = "<group>"; };
+		A049968522817DE5009D09FA /* Ex+FixedWidthInteger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+FixedWidthInteger.swift"; sourceTree = "<group>"; };
+		A049968B22818384009D09FA /* ANBinaryCodableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ANBinaryCodableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A049968D22818384009D09FA /* BinaryCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryCodableTests.swift; sourceTree = "<group>"; };
+		A049968F22818384009D09FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +58,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A049968822818384009D09FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A049969022818384009D09FA /* ANBinaryCodable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +87,7 @@
 			children = (
 				A0205E1922807BBA006616A7 /* BinaryDataDecoder.swift */,
 				A0205E1B22807BCC006616A7 /* BinaryDataEncoder.swift */,
+				A049968322816617009D09FA /* BufferedData.swift */,
 			);
 			path = Coder;
 			sourceTree = "<group>";
@@ -77,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				A0205E112280778E006616A7 /* Ex+ExpressibleByIntegerLiteral.swift */,
+				A049968522817DE5009D09FA /* Ex+FixedWidthInteger.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -87,6 +116,7 @@
 				A0205E17228077C9006616A7 /* LICENSE */,
 				A0205E18228077C9006616A7 /* README.md */,
 				A038C7EA2280745700CBD8E0 /* Sources */,
+				A049968C22818384009D09FA /* Tests */,
 				A038C7E92280745700CBD8E0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				A038C7E82280745700CBD8E0 /* ANBinaryCodable.framework */,
+				A049968B22818384009D09FA /* ANBinaryCodableTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,6 +141,15 @@
 				A0205E0F2280774F006616A7 /* Util */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		A049968C22818384009D09FA /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A049968D22818384009D09FA /* BinaryCodableTests.swift */,
+				A049968F22818384009D09FA /* Info.plist */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,18 +184,40 @@
 			productReference = A038C7E82280745700CBD8E0 /* ANBinaryCodable.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		A049968A22818384009D09FA /* ANBinaryCodableTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A049969322818384009D09FA /* Build configuration list for PBXNativeTarget "ANBinaryCodableTests" */;
+			buildPhases = (
+				A049968722818384009D09FA /* Sources */,
+				A049968822818384009D09FA /* Frameworks */,
+				A049968922818384009D09FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A049969222818384009D09FA /* PBXTargetDependency */,
+			);
+			name = ANBinaryCodableTests;
+			productName = ANBinaryCodableTests;
+			productReference = A049968B22818384009D09FA /* ANBinaryCodableTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		A038C7DF2280745700CBD8E0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = anotheren.com;
 				TargetAttributes = {
 					A038C7E72280745700CBD8E0 = {
 						CreatedOnToolsVersion = 10.2.1;
 						LastSwiftMigration = 1020;
+					};
+					A049968A22818384009D09FA = {
+						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
 			};
@@ -172,12 +234,20 @@
 			projectRoot = "";
 			targets = (
 				A038C7E72280745700CBD8E0 /* ANBinaryCodable */,
+				A049968A22818384009D09FA /* ANBinaryCodableTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A038C7E62280745700CBD8E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A049968922818384009D09FA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -192,17 +262,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0205E1A22807BBA006616A7 /* BinaryDataDecoder.swift in Sources */,
+				A049968622817DE5009D09FA /* Ex+FixedWidthInteger.swift in Sources */,
 				A0205E1C22807BCC006616A7 /* BinaryDataEncoder.swift in Sources */,
 				A0205E152280779C006616A7 /* UInt24.swift in Sources */,
 				A0205E0622807511006616A7 /* BinaryEncodable.swift in Sources */,
 				A0205E162280779C006616A7 /* Endian.swift in Sources */,
 				A0205E0822807530006616A7 /* BinaryCodable.swift in Sources */,
+				A049968422816617009D09FA /* BufferedData.swift in Sources */,
 				A0205E04228074F3006616A7 /* BinaryDecodable.swift in Sources */,
 				A0205E122280778E006616A7 /* Ex+ExpressibleByIntegerLiteral.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A049968722818384009D09FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A049968E22818384009D09FA /* BinaryCodableTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A049969222818384009D09FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A038C7E72280745700CBD8E0 /* ANBinaryCodable */;
+			targetProxy = A049969122818384009D09FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A038C7EE2280745700CBD8E0 /* Debug */ = {
@@ -384,6 +472,42 @@
 			};
 			name = Release;
 		};
+		A049969422818384009D09FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7SA22A9L3L;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.anotheren.ANBinaryCodableTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A049969522818384009D09FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7SA22A9L3L;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.anotheren.ANBinaryCodableTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -401,6 +525,15 @@
 			buildConfigurations = (
 				A038C7F12280745700CBD8E0 /* Debug */,
 				A038C7F22280745700CBD8E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A049969322818384009D09FA /* Build configuration list for PBXNativeTarget "ANBinaryCodableTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A049969422818384009D09FA /* Debug */,
+				A049969522818384009D09FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

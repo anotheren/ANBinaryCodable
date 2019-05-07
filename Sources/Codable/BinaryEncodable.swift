@@ -15,16 +15,24 @@ public protocol BinaryEncodable {
 
 public protocol BinaryEncoder {
     
+    var userInfo: [BinaryCodingUserInfoKey: Any] { get }
+    
     func container() -> BinaryEncodingContainer
 }
 
 public protocol BinaryEncodingContainer {
     
-    mutating func encode<T: FixedWidthInteger>(_ value: T, using endian: Endian) throws
-    
-    mutating func encode<T: BinaryFloatingPoint>(_ value: T, using endian: Endian) throws
-    
+    mutating func encode(_ value: Int8, using endian: Endian) throws
+    mutating func encode(_ value: Int16, using endian: Endian) throws
+    mutating func encode(_ value: Int32, using endian: Endian) throws
+    mutating func encode(_ value: Int64, using endian: Endian) throws
+    mutating func encode(_ value: UInt8, using endian: Endian) throws
+    mutating func encode(_ value: UInt16, using endian: Endian) throws
+    mutating func encode(_ value: UInt24, using endian: Endian) throws
+    mutating func encode(_ value: UInt32, using endian: Endian) throws
+    mutating func encode(_ value: UInt64, using endian: Endian) throws
+    mutating func encode(_ value: Float, using endian: Endian) throws
+    mutating func encode(_ value: Double, using endian: Endian) throws
     mutating func encode<T>(_ value: T) throws where T: BinaryEncodable
-    
-    mutating func encode<S>(sequence: S) throws where S: Sequence, S.Element == UInt8
+    mutating func encode<S>(_ sequence: S) throws where S: Sequence, S.Element == UInt8
 }
