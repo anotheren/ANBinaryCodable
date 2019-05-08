@@ -21,6 +21,7 @@
 		A049968622817DE5009D09FA /* Ex+FixedWidthInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A049968522817DE5009D09FA /* Ex+FixedWidthInteger.swift */; };
 		A049968E22818384009D09FA /* BinaryCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A049968D22818384009D09FA /* BinaryCodableTests.swift */; };
 		A049969022818384009D09FA /* ANBinaryCodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A038C7E82280745700CBD8E0 /* ANBinaryCodable.framework */; };
+		A0847FCA22825FD3007568E9 /* BinaryCodableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0847FC922825FD3007568E9 /* BinaryCodableError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		A049968B22818384009D09FA /* ANBinaryCodableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ANBinaryCodableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A049968D22818384009D09FA /* BinaryCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryCodableTests.swift; sourceTree = "<group>"; };
 		A049968F22818384009D09FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0847FC922825FD3007568E9 /* BinaryCodableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryCodableError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		A0205E0F2280774F006616A7 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				A0847FC922825FD3007568E9 /* BinaryCodableError.swift */,
 				A0205E142280779C006616A7 /* Endian.swift */,
 				A0205E132280779C006616A7 /* UInt24.swift */,
 			);
@@ -274,6 +277,7 @@
 				A049968422816617009D09FA /* BufferedData.swift in Sources */,
 				A0205E04228074F3006616A7 /* BinaryDecodable.swift in Sources */,
 				A0205E122280778E006616A7 /* Ex+ExpressibleByIntegerLiteral.swift in Sources */,
+				A0847FCA22825FD3007568E9 /* BinaryCodableError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

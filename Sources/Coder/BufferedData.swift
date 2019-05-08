@@ -8,17 +8,12 @@
 
 import Foundation
 
-public enum BufferedDataError: Error {
-    
-    case eof
-}
-
 final public class BufferedData {
     
     public private(set) var storage: Data
     public private(set) var position: Int = 0
     
-    public var availableLength: Int {
+    public var bytesAvailable: Int {
         return storage.count - position
     }
     
@@ -35,22 +30,22 @@ final public class BufferedData {
     }
     
     public func read(length: Int) throws -> Data {
-        guard length <= availableLength else {
-            throw BufferedDataError.eof
+        guard length <= bytesAvailable else {
+            throw BinaryCodableError.eof
         }
         let data = storage.subdata(in: position..<position+length)
         position += length
         return data
     }
     
-    public func removeData(length: Int) {
+    public func removeFirst(length: Int) {
         guard length > 0 else { return }
         if length < storage.count {
             storage.removeFirst(length)
         } else {
             storage.removeAll()
         }
-        position = 0
+        reset()
     }
     
     public func write(data: Data) {
