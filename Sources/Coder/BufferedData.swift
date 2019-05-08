@@ -29,6 +29,14 @@ final public class BufferedData {
         position = 0
     }
     
+    public func peek(length: Int) throws -> Data {
+        guard length <= bytesAvailable else {
+            throw BinaryCodableError.eof
+        }
+        let data = storage[position..<position+length]
+        return data
+    }
+    
     public func read(length: Int) throws -> Data {
         guard length <= bytesAvailable else {
             throw BinaryCodableError.eof
