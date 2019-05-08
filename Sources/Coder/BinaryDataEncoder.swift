@@ -46,67 +46,12 @@ struct _BinaryDataEncodingContainer: BinaryEncodingContainer {
         self.userInfo = userInfo
     }
     
-    func encode(_ value: Int8, using endian: Endian) throws {
-        let data = value.update(endian: endian).data
-        bufferedData.write(data: data)
-    }
-    
-    func encode(_ value: Int16, using endian: Endian) throws {
-        let data = value.update(endian: endian).data
-        bufferedData.write(data: data)
-    }
-    
-    func encode(_ value: Int32, using endian: Endian) throws {
-        let data = value.update(endian: endian).data
-        bufferedData.write(data: data)
-    }
-    
-    func encode(_ value: Int64, using endian: Endian) throws {
-        let data = value.update(endian: endian).data
-        bufferedData.write(data: data)
-    }
-    
-    func encode(_ value: UInt8, using endian: Endian) throws {
-        let data = value.update(endian: endian).data
-        bufferedData.write(data: data)
-    }
-    
-    func encode(_ value: UInt16, using endian: Endian) throws {
-        let data = value.update(endian: endian).data
-        bufferedData.write(data: data)
-    }
-    
-    func encode(_ value: UInt24, using endian: Endian) throws {
-        let data = value.update(endian: endian).data
-        bufferedData.write(data: data)
-    }
-    
-    func encode(_ value: UInt32, using endian: Endian) throws {
-        let data = value.update(endian: endian).data
-        bufferedData.write(data: data)
-    }
-    
-    func encode(_ value: UInt64, using endian: Endian) throws {
-        let data = value.update(endian: endian).data
-        bufferedData.write(data: data)
-    }
-    
-    func encode(_ value: Float, using endian: Endian) throws {
-        let data = value.bitPattern.update(endian: endian).data
-        bufferedData.write(data: data)
-    }
-    
-    func encode(_ value: Double, using endian: Endian) throws {
-        let data = value.bitPattern.update(endian: endian).data
+    func write(data: Data) {
         bufferedData.write(data: data)
     }
     
     func encode<T>(_ value: T) throws where T : BinaryEncodable {
         let encoder = _BinaryDataEncoder(bufferedData: bufferedData, userInfo: userInfo)
         try value.encode(to: encoder)
-    }
-    
-    func encode<S>(_ sequence: S) throws where S : Sequence, S.Element == UInt8 {
-        bufferedData.write(data: Data(sequence))
     }
 }
