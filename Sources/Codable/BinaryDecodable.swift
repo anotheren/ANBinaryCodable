@@ -20,7 +20,7 @@ public protocol BinaryDecoder {
     func container() -> BinaryDecodingContainer
 }
 
-public protocol BinaryDecodingContainer: BaseDecodingContainer {
+public protocol BinaryDecodingContainer: BaseBinaryDecodingContainer {
     
     var userInfo: [BinaryCodingUserInfoKey: Any] { get }
     
@@ -29,7 +29,7 @@ public protocol BinaryDecodingContainer: BaseDecodingContainer {
     mutating func decode<T>(_ type: T.Type) throws -> T where T: BinaryDecodable
 }
 
-public protocol BaseDecodingContainer {
+public protocol BaseBinaryDecodingContainer {
     
     mutating func read(length: Int) throws -> Data
     mutating func decode(length: Int) throws -> Data
@@ -46,7 +46,7 @@ public protocol BaseDecodingContainer {
     mutating func decode(using endian: Endian) throws -> Double
 }
 
-extension BaseDecodingContainer {
+extension BaseBinaryDecodingContainer {
     
     public mutating func decode(length: Int) throws -> Data {
         let data = try read(length: length)

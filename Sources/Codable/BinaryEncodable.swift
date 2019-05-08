@@ -20,12 +20,12 @@ public protocol BinaryEncoder {
     func container() -> BinaryEncodingContainer
 }
 
-public protocol BinaryEncodingContainer: BaseEncodingContainer {
+public protocol BinaryEncodingContainer: BaseBinaryEncodingContainer {
     
     mutating func encode<T>(_ value: T) throws where T: BinaryEncodable
 }
 
-public protocol BaseEncodingContainer {
+public protocol BaseBinaryEncodingContainer {
     
     mutating func write(data: Data) throws
     mutating func encode<S>(_ sequence: S) throws where S: Sequence, S.Element == UInt8
@@ -42,7 +42,7 @@ public protocol BaseEncodingContainer {
     mutating func encode(_ value: Double, using endian: Endian) throws
 }
 
-extension BaseEncodingContainer {
+extension BaseBinaryEncodingContainer {
     
     public mutating func encode<S>(_ sequence: S) throws where S : Sequence, S.Element == UInt8 {
         try write(data: Data(sequence))
