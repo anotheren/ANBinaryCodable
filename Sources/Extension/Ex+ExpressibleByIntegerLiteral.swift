@@ -10,7 +10,7 @@ import Foundation
 
 extension ExpressibleByIntegerLiteral {
     
-    public var data: Data {
+    var data: Data {
         var value: Self = self
         let size: Int = MemoryLayout<Self>.size
         return withUnsafeMutablePointer(to: &value) {
@@ -20,7 +20,7 @@ extension ExpressibleByIntegerLiteral {
         }
     }
     
-    public init(data: Data) {
+    init(data: Data) {
         let diff: Int = MemoryLayout<Self>.size - data.count
         if diff > 0 {
             let buffer = Data(repeating: 0, count: diff)
