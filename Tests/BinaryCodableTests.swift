@@ -45,16 +45,16 @@ class BinaryCodableTests: XCTestCase {
             p7 = try container.decode(Case2.self)
         }
         
-        func encode(to encoder: BinaryEncoder) throws {
+        func encode(to encoder: BinaryEncoder) {
             var container = encoder.container()
-            try container.encode(p0)
-            try container.encode(p1, using: .big)
-            try container.encode(p2, using: .little)
-            try container.encode(p3, using: .big)
-            try container.encode(p4, using: .little)
-            try container.encode(p5, using: .big)
-            try container.encode(p6)
-            try container.encode(p7)
+            container.encode(p0)
+            container.encode(p1, using: .big)
+            container.encode(p2, using: .little)
+            container.encode(p3, using: .big)
+            container.encode(p4, using: .little)
+            container.encode(p5, using: .big)
+            container.encode(p6)
+            container.encode(p7)
         }
     }
     
@@ -80,12 +80,12 @@ class BinaryCodableTests: XCTestCase {
             p3 = try container.decode(length: 10)
         }
         
-        func encode(to encoder: BinaryEncoder) throws {
+        func encode(to encoder: BinaryEncoder) {
             var container = encoder.container()
-            try container.encode(p0, using: .little)
-            try container.encode(p1, using: .big)
-            try container.encode(p2, using: .little)
-            try container.encode(p3)
+            container.encode(p0, using: .little)
+            container.encode(p1, using: .big)
+            container.encode(p2, using: .little)
+            container.encode(p3)
         }
     }
 

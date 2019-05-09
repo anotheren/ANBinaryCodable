@@ -16,7 +16,7 @@ public struct BinaryDataEncoder {
     
     public func encode<T>(_ value: T) throws -> Data where T: BinaryEncodable {
         let encoder = _BinaryDataEncoder(bufferedData: BufferedData(), userInfo: userInfo)
-        try value.encode(to: encoder)
+        value.encode(to: encoder)
         return encoder.bufferedData.storage
     }
 }
@@ -50,8 +50,8 @@ struct _BinaryDataEncodingContainer: BinaryEncodingContainer {
         bufferedData.write(data: data)
     }
     
-    func encode<T>(_ value: T) throws where T : BinaryEncodable {
+    func encode<T>(_ value: T) where T : BinaryEncodable {
         let encoder = _BinaryDataEncoder(bufferedData: bufferedData, userInfo: userInfo)
-        try value.encode(to: encoder)
+        value.encode(to: encoder)
     }
 }
