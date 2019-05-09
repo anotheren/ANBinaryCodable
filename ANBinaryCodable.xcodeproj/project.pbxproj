@@ -22,6 +22,8 @@
 		A049968E22818384009D09FA /* BinaryCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A049968D22818384009D09FA /* BinaryCodableTests.swift */; };
 		A049969022818384009D09FA /* ANBinaryCodable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A038C7E82280745700CBD8E0 /* ANBinaryCodable.framework */; };
 		A0847FCA22825FD3007568E9 /* BinaryCodableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0847FC922825FD3007568E9 /* BinaryCodableError.swift */; };
+		A084E1042283B594008826AE /* BaseBinaryDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A084E1032283B594008826AE /* BaseBinaryDecodingContainer.swift */; };
+		A084E1062283B64F008826AE /* BaseBinaryEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A084E1052283B64F008826AE /* BaseBinaryEncodingContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		A049968D22818384009D09FA /* BinaryCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryCodableTests.swift; sourceTree = "<group>"; };
 		A049968F22818384009D09FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0847FC922825FD3007568E9 /* BinaryCodableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryCodableError.swift; sourceTree = "<group>"; };
+		A084E1032283B594008826AE /* BaseBinaryDecodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBinaryDecodingContainer.swift; sourceTree = "<group>"; };
+		A084E1052283B64F008826AE /* BaseBinaryEncodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBinaryEncodingContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 				A0205E0722807530006616A7 /* BinaryCodable.swift */,
 				A0205E03228074F3006616A7 /* BinaryDecodable.swift */,
 				A0205E0522807511006616A7 /* BinaryEncodable.swift */,
+				A084E1032283B594008826AE /* BaseBinaryDecodingContainer.swift */,
+				A084E1052283B64F008826AE /* BaseBinaryEncodingContainer.swift */,
 			);
 			path = Codable;
 			sourceTree = "<group>";
@@ -271,6 +277,7 @@
 				A049968622817DE5009D09FA /* Ex+FixedWidthInteger.swift in Sources */,
 				A0205E1C22807BCC006616A7 /* BinaryDataEncoder.swift in Sources */,
 				A0205E152280779C006616A7 /* UInt24.swift in Sources */,
+				A084E1042283B594008826AE /* BaseBinaryDecodingContainer.swift in Sources */,
 				A0205E0622807511006616A7 /* BinaryEncodable.swift in Sources */,
 				A0205E162280779C006616A7 /* Endian.swift in Sources */,
 				A0205E0822807530006616A7 /* BinaryCodable.swift in Sources */,
@@ -278,6 +285,7 @@
 				A0205E04228074F3006616A7 /* BinaryDecodable.swift in Sources */,
 				A0205E122280778E006616A7 /* Ex+ExpressibleByIntegerLiteral.swift in Sources */,
 				A0847FCA22825FD3007568E9 /* BinaryCodableError.swift in Sources */,
+				A084E1062283B64F008826AE /* BaseBinaryEncodingContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
