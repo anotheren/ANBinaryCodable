@@ -62,7 +62,7 @@ struct _BinaryDataDecodingContainer: BinaryDecodingContainer {
     }
     
     @inlinable
-    func decode<T>(_ type: T.Type) throws -> T where T : BinaryDecodable {
+    func decode<T>(_ type: T.Type) throws -> T where T: BinaryDecodable {
         return try T.init(from: _BinaryDataDecoder(bufferedData: bufferedData, userInfo: userInfo))
     }
 }

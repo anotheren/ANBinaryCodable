@@ -52,7 +52,7 @@ struct _BinaryDataEncodingContainer: BinaryEncodingContainer {
     }
     
     @inlinable
-    func encode<T>(_ value: T) where T : BinaryEncodable {
+    func encode<T>(_ value: T) where T: BinaryEncodable {
         let encoder = _BinaryDataEncoder(bufferedData: bufferedData, userInfo: userInfo)
         value.encode(to: encoder)
     }

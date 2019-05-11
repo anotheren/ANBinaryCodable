@@ -28,7 +28,7 @@ public protocol BaseBinaryEncodingContainer {
 extension BaseBinaryEncodingContainer {
     
     @inlinable
-    public mutating func encode<S>(_ sequence: S) where S : Sequence, S.Element == UInt8 {
+    public mutating func encode<S>(_ sequence: S) where S: Sequence, S.Element == UInt8 {
         write(data: Data(sequence))
     }
     
