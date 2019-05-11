@@ -56,10 +56,12 @@ struct _BinaryDataDecodingContainer: BinaryDecodingContainer {
         return bufferedData.isAtEnd
     }
     
+    @inlinable
     func read(length: Int) throws -> Data {
         return try bufferedData.read(length: length)
     }
     
+    @inlinable
     func decode<T>(_ type: T.Type) throws -> T where T : BinaryDecodable {
         return try T.init(from: _BinaryDataDecoder(bufferedData: bufferedData, userInfo: userInfo))
     }

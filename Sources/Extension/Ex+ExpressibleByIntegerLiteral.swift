@@ -10,6 +10,7 @@ import Foundation
 
 extension ExpressibleByIntegerLiteral {
     
+    @inlinable
     public var data: Data {
         var value: Self = self
         let size: Int = MemoryLayout<Self>.size
@@ -20,6 +21,7 @@ extension ExpressibleByIntegerLiteral {
         }
     }
     
+    @inlinable
     public init(data: Data) {
         let diff: Int = MemoryLayout<Self>.size - data.count
         if diff > 0 {

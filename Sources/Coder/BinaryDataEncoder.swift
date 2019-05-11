@@ -46,10 +46,12 @@ struct _BinaryDataEncodingContainer: BinaryEncodingContainer {
         self.userInfo = userInfo
     }
     
+    @inlinable
     func write(data: Data) {
         bufferedData.write(data: data)
     }
     
+    @inlinable
     func encode<T>(_ value: T) where T : BinaryEncodable {
         let encoder = _BinaryDataEncoder(bufferedData: bufferedData, userInfo: userInfo)
         value.encode(to: encoder)
