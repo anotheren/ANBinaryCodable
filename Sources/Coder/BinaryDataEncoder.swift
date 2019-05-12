@@ -19,6 +19,11 @@ public struct BinaryDataEncoder {
         value.encode(to: encoder)
         return encoder.bufferedData.storage
     }
+    
+    public func encode<T>(_ value: T, to bufferedData: BufferedData) throws where T: BinaryEncodable {
+        let encoder = _BinaryDataEncoder(bufferedData: bufferedData, userInfo: userInfo)
+        value.encode(to: encoder)
+    }
 }
 
 struct _BinaryDataEncoder: BinaryEncoder {
