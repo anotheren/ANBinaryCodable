@@ -95,7 +95,7 @@ class BinaryCodableTests: XCTestCase {
         let case10 = Case1(p0: case20, p1: 123, p2: 123, p3: 123, p4: 123, p5: 123, p6: Data(repeating: 133, count: 20), p7: case21)
         do {
             let encoder = BinaryDataEncoder()
-            let data = try encoder.encode(case10)
+            let data = encoder.encode(case10)
             
             let deocder = BinaryDataDecoder()
             let case11 = try deocder.decode(Case1.self, from: data)

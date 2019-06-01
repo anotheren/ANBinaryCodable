@@ -14,7 +14,7 @@ public struct BinaryDataEncoder {
     
     public var userInfo: [BinaryCodingUserInfoKey: Any] = [:]
     
-    public func encode<T>(_ value: T) throws -> Data where T: BinaryEncodable {
+    public func encode<T>(_ value: T) -> Data where T: BinaryEncodable {
         let encoder = _BinaryDataEncoder(bufferedData: BufferedData(), userInfo: userInfo)
         value.encode(to: encoder)
         return encoder.bufferedData.storage
