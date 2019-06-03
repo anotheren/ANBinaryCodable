@@ -20,7 +20,7 @@ public struct BinaryDataEncoder {
         return encoder.bufferedData.storage
     }
     
-    public func encode<T>(_ value: T, to bufferedData: BufferedData) throws where T: BinaryEncodable {
+    public func encode<T>(_ value: T, to bufferedData: BufferedData) where T: BinaryEncodable {
         let encoder = _BinaryDataEncoder(bufferedData: bufferedData, userInfo: userInfo)
         value.encode(to: encoder)
     }
